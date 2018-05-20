@@ -24,7 +24,7 @@ function Load_Grid_Compras(pParametros) {
               { label: "idCompra",          name: "idCompra",           jsonmap: "idCompra",        index: "idCompra",          width:100,align: "left", sortable: true }
             , { label: "Descrição",         name: "Descricao",          jsonmap: "Descricao",       index: "Descricao",         width:100,align: "center", sortable: true }
             , { label: "Estabelecimento",   name: "Estabelecimento",    jsonmap: "Estabelecimento", index: "Estabelecimento",   width:100,align: "center", sortable: true }
-            , { label: "Data Compra",       name: "Data Compra",        jsonmap: "DataCompra",      index: "DataCompra",        width:100,align: "center", sortable: true, formatter: 'date', formatoptions: { srcformat: 'Y-m-d ', newformat: 'd/m/Y'} }
+            , { label: "Data Compra",       name: "DataCompra",         jsonmap: "DataCompra",      index: "DataCompra",        width:100,align: "center", sortable: true,  formatter: 'date', formatoptions: { srcformat: 'Y-m-d', newformat: 'd/m/Y', } ,datefmt:'d-M-Y' }
             , { label: "Forma Pagamento",   name: "FormaPagamento",     jsonmap: "FormaPagamento",  index: "FormaPagamento",    width:100,align: "center", sortable: true }
             , { label: "Cancelar",          name: "Cancelamento",       jsonmap: "Cancelamento",    index: "Cancelamento",      width: 100, align: "center", sortable: true }
         ]
@@ -62,11 +62,16 @@ function Load_Grid_Compras_Callback(pResposta) {
                 {
                     idCompra        : lData[i].IdCompra,
                     Descricao       : lData[i].Descricao,
-                    Estabelecimento : lData[i].Estabelecimento,
-                    DataCompra      : lData[i].DataCompra,
+                    Estabelecimento: lData[i].Estabelecimento,
                     FormaPagamento  : lData[i].FormaPagamento,
                     Cancelamento    : 'S'
                 };
+
+            var lTemp = new Date(lData[i].DataCompra);
+
+            var lDateString = lTemp.getDate() + "/" + (lTemp.getMonth() + 1) + "/" + lTemp.getFullYear();
+
+            lObjeto.DataCompra = lDateString,
 
             gDados_ListaCompras.rows.push(lObjeto);
             gDados_ListaCompras.total++;
@@ -160,6 +165,11 @@ function Load_Grid_Compras_ItemDataBound(rowid, pData) {
     {
         lGrid.jqGrid('setCell', rowid, 'Cancelamento', '<div><a href="javascript:void(0);" onclick="javascript:Load_Grid_Compra_Cancelar(\'' + pData.idCompra + '\')" ><span class="ui-button-icon ui-icon ui-icon-closethick" style="padding-left:5px"></span></a></div>', '');
     }
+    var lDate =  pData.DataCompra;
+
+    //let lDataStirng = lDate.getDate() + "/"+ (lDate.getMonth()+1) + "/" + lDate.getFullYear();
+
+    //lGrid.jqGrid('setCell', rowid, 'DataCompra', lDataStirng);
 
     if (pData.FormaPagamento == "1")
     {

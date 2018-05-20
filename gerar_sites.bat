@@ -17,6 +17,9 @@ SET APPCMD=%WINDIR%\system32\inetsrv\appcmd.exe
 @ECHO Seta o APPLICATION POOL 
 %APPCMD% SET APP "M2M_Server" /APPLICATIONPOOL:"M2M_Server"
 
+@ECHO Seta o APPLICATION POOL 
+%APPCMD% SET APP "M2M_Client" /APPLICATIONPOOL:"M2M_Client"
+
 REM Cria o site server-side WebAPI no IIS
 %systemroot%\system32\inetsrv\appcmd add site /name:"M2M_Server" /id:88 /physicalPath:"C:\CompraCredito\PublishWebAPI" /bindings:http/*:50970:localhost
 
@@ -27,7 +30,7 @@ REM Tenta migrar config IIS7
 %SystemRoot%\system32\inetsrv\appcmd migrate config "M2M_Server"
 
 REM Tenta migrar config IIS7 
-%SystemRoot%\system32\inetsrv\appcmd migrate config "M2M_Cliente"
+%SystemRoot%\system32\inetsrv\appcmd migrate config "M2M_Client"
 
 REM Start no server-side
 %SystemRoot%\system32\inetsrv\appcmd start site "M2M_Server"
