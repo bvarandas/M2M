@@ -64,5 +64,20 @@ namespace M2MTest.WebAPI
 
             lBus.CarregarDadosMock();
         }
+
+        [TestCase]
+        public void ListarExtrato()
+        {
+            CompraBus lBus = new CompraBus();
+
+            lBus.CarregarDadosMock();
+
+            var lData = new DateTime(2018, 2, 1);
+
+            /// há um registro de extrato no mÊs de fevereiro
+            var lLista = lBus.ListaExtrato(lData);
+
+            Assert.AreEqual(1, lLista.Count);
+        }
     }
 }

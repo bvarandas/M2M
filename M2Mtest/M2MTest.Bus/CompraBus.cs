@@ -207,6 +207,13 @@ namespace M2MTest.Bus
                 using (var lMock = new DadosMockBus())
                 {
                     lRetorno = lMock.CarregarDadosMock();
+
+                    using ( _dbAcesso = new DBAcesso())
+                    {
+                        _dbAcesso.LimparTabela();
+
+                        _dbAcesso.InserirCompra(lRetorno);
+                    }
                 }
             }
             catch (Exception ex)

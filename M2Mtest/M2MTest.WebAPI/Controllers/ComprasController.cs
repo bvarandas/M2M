@@ -178,19 +178,14 @@ namespace M2MTest.WebAPI.Controllers
         {
             try
             {
-                using (Mock.DadosMock lMock = new Mock.DadosMock())
+                var listaCompra = new List<Compra>();
+
+                using (_compraBus = new CompraBus())
                 {
-                    var listaCompra = lMock.CarregarDadosMock();
-
-                    using (_compraBus = new CompraBus())
-                    {
-                        _compraBus.LimparTabela();
-
-                        _compraBus.InserirCompra(listaCompra);
-                    }
-
-                    return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
+                    listaCompra = _compraBus.CarregarDadosMock();
                 }
+
+                return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
             }
             catch (Exception ex)
             {
