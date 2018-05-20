@@ -4,11 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using M2MTest.DB;
 using M2MTest.Entities;
 using log4net;
 using System.Web;
 using System.Globalization;
+using M2MTest.Bus;
 
 namespace M2MTest.WebAPI.Controllers
 {
@@ -17,12 +17,17 @@ namespace M2MTest.WebAPI.Controllers
         /// <summary>
         /// Atributo responsável pela log da classe
         /// </summary>
-        public static readonly log4net.ILog _Logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        public static readonly log4net.ILog _logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         /// <summary>
-        /// PAra conversão de moeda
+        /// Para conversão de moeda
         /// </summary>
-        private CultureInfo lCulture = new CultureInfo("pt-BR");
+        private CultureInfo _culture = new CultureInfo("pt-BR");
+
+        /// <summary>
+        /// Classe de negócio de compras
+        /// </summary>
+        public CompraBus _compraBus;
 
         /// <summary>
         /// Inserção no mongo DB
@@ -35,34 +40,34 @@ namespace M2MTest.WebAPI.Controllers
             try
             {
                 var lRequest = HttpContext.Current.Request;
-                
-                Compra lCompra = new Compra();
-                
-                lCompra.Estabelecimento     = lRequest.Unvalidated["Estabelecimento"];
-                lCompra.Descricao           = lRequest.Unvalidated["Descricao"];
-                lCompra.FormaPagamento      = lRequest.Unvalidated["FormaPagamento"];
-                lCompra.DataCompra          = Convert.ToDateTime( lRequest.Unvalidated["DataCompra"]);
-                lCompra.ValorPagto          = Convert.ToDecimal(lRequest.Unvalidated["ValorPagto"], lCulture);
-                
-                DB.DBAcesso ldb = new DB.DBAcesso();
 
-                var listTemp = ldb.ListarCompras();
+                using (_compraBus = new CompraBus())
+                {
 
-                lCompra.IdCompra = listTemp.Count+1;
+                    Compra lCompra = new Compra();
 
-                var listaCompra = new List<Compra>();
+                    lCompra.Estabelecimento = lRequest.Unvalidated["Estabelecimento"];
+                    lCompra.Descricao       = lRequest.Unvalidated["Descricao"];
+                    lCompra.FormaPagamento  = lRequest.Unvalidated["FormaPagamento"];
+                    lCompra.DataCompra      = Convert.ToDateTime(lRequest.Unvalidated["DataCompra"]);
+                    lCompra.ValorPagto      = Convert.ToDecimal(lRequest.Unvalidated["ValorPagto"], _culture);
+                    
+                    var listTemp = _compraBus.ListarCompras();
 
-                listaCompra.Add(lCompra);
+                    lCompra.IdCompra = listTemp.Count + 1;
 
-                
+                    var listaCompra = new List<Compra>();
 
-                ldb.InserirCompra(listaCompra);
+                    listaCompra.Add(lCompra);
 
-                return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
+                    _compraBus.InserirCompra(listaCompra);
+
+                    return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
+                }
             }
             catch (Exception ex)
             {
-                _Logger.Error(ex.Message, ex);
+                _logger.Error(ex.Message, ex);
 
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Erro ao inserir uma Nova Compra: " + ex.Message);
             }
@@ -76,24 +81,29 @@ namespace M2MTest.WebAPI.Controllers
         [ActionName("ListarCompras")]
         public HttpResponseMessage ListarCompras()
         {
+            var lRetorno = new HttpResponseMessage();
+
             try
             {
                 var lRequest = HttpContext.Current.Request;
 
-                DB.DBAcesso ldb = new DB.DBAcesso();
-                
-                var listaCompra = new List<Compra>();
+                using (_compraBus = new CompraBus())
+                {
+                    var listaCompra = new List<Compra>();
 
-                listaCompra = ldb.ListarCompras();
+                    listaCompra = _compraBus.ListarCompras();
 
-                return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
+                    lRetorno =  Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
+                }
             }
             catch (Exception ex)
             {
-                _Logger.Error(ex.Message, ex);
+                _logger.Error(ex.Message, ex);
 
-                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Erro ao Lista compras: " + ex.Message);
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Erro ao Listar compras: " + ex.Message);
             }
+
+            return lRetorno;
         }
 
 
@@ -105,19 +115,20 @@ namespace M2MTest.WebAPI.Controllers
             {
                 var lRequest = HttpContext.Current.Request;
 
-                DateTime lDate = Convert.ToDateTime(lRequest.Unvalidated["DataCompra"]);
+                using (_compraBus = new CompraBus())
+                {
+                    DateTime lDate = Convert.ToDateTime(lRequest.Unvalidated["DataCompra"]);
 
-                var listaExtrato = new List<ExtratoMensal>();
+                    var listaExtrato = new List<ExtratoMensal>();
+                    
+                    listaExtrato = _compraBus.ListaExtrato(lDate);
 
-                DB.DBAcesso ldb = new DB.DBAcesso();
-
-                listaExtrato = ldb.ListaExtrato(lDate);
-
-                return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaExtrato));
+                    return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaExtrato));
+                }
             }
             catch (Exception ex)
             {
-                _Logger.Error(ex.Message, ex);
+                _logger.Error(ex.Message, ex);
 
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Erro ao Listar extrato compras: " + ex.Message);
             }
@@ -126,7 +137,7 @@ namespace M2MTest.WebAPI.Controllers
         /// <summary>
         /// Manda a chamada para o banco de dados para cancelar uma compra específica
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retorna uma lista de objeto do tipo compra</returns>
         [HttpPost]
         [ActionName("CancelarCompra")]
         public HttpResponseMessage CancelarCompra()
@@ -135,50 +146,57 @@ namespace M2MTest.WebAPI.Controllers
             {
                 var lRequest = HttpContext.Current.Request;
 
-                int IdCompra = Convert.ToInt32( lRequest.Unvalidated["idCompra"]);
+                using (_compraBus = new CompraBus())
+                {
 
-                var listaCompra = new List<Compra>();
+                    int IdCompra = Convert.ToInt32(lRequest.Unvalidated["idCompra"]);
 
-                listaCompra.Add(new Compra() { IdCompra = IdCompra });
+                    var listaCompra = new List<Compra>();
 
-                DB.DBAcesso ldb = new DB.DBAcesso();
+                    listaCompra.Add(new Compra() { IdCompra = IdCompra });
 
-                ldb.CancelarCompra(listaCompra);
+                    _compraBus.CancelarCompra(listaCompra);
 
-                return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
+                    return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
+                }
             }
             catch (Exception ex)
             {
-                _Logger.Error(ex.Message, ex);
+                _logger.Error(ex.Message, ex);
 
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Erro ao cancelar compra: " + ex.Message);
             }
         }
 
+        /// <summary>
+        /// Método para carregar dados falsos mock, só para carregar dados no banco e gerar a collection necessária
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [ActionName("CarregaDadosMock")]
         public HttpResponseMessage CarregaDadosMock()
         {
             try
             {
-                //var httpRequest = HttpContext.Current.Request;
-                Mock.DadosMock lMock = new Mock.DadosMock();
+                using (Mock.DadosMock lMock = new Mock.DadosMock())
+                {
+                    var listaCompra = lMock.CarregarDadosMock();
 
-                var listaCompra = lMock.CarregarDadosMock();
+                    using (_compraBus = new CompraBus())
+                    {
+                        _compraBus.LimparTabela();
 
-                DB.DBAcesso ldb = new DB.DBAcesso();
+                        _compraBus.InserirCompra(listaCompra);
+                    }
 
-                ldb.LimparTabela();
-
-                ldb.InserirCompra(listaCompra);
-
-                return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
+                    return Request.CreateResponse(HttpStatusCode.OK, Newtonsoft.Json.JsonConvert.SerializeObject(listaCompra));
+                }
             }
             catch (Exception ex)
             {
-                _Logger.Error(ex.Message, ex);
+                _logger.Error(ex.Message, ex);
 
-                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Erro ao cancelar compra: " + ex.Message);
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Erro ao carregar dados mock: " + ex.Message);
             }
         }
 

@@ -216,3 +216,8 @@ C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\bin\pt-br\System.Web.
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\obj\Debug\M2MTest.WebAPI.csprojResolveAssemblyReference.cache
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\obj\Debug\M2MTest.WebAPI.dll
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\obj\Debug\M2MTest.WebAPI.pdb
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\bin\M2MTest.Bus.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\bin\M2MTest.Bus.pdb
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\bin\nunit.framework.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\bin\nunit.framework.pdb
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\bin\nunit.framework.xml

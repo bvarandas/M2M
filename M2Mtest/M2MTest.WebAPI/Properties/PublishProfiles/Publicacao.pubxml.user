@@ -96,11 +96,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/log4net.dll">
       <publishTime>08/30/2013 15:40:56</publishTime>
     </File>
+    <File Include="bin/M2MTest.Bus.dll">
+      <publishTime>05/20/2018 14:06:26</publishTime>
+    </File>
+    <File Include="bin/M2MTest.Bus.pdb">
+      <publishTime>05/20/2018 14:06:26</publishTime>
+    </File>
     <File Include="bin/M2MTest.DB.dll">
-      <publishTime>05/19/2018 20:15:17</publishTime>
+      <publishTime>05/20/2018 12:17:37</publishTime>
     </File>
     <File Include="bin/M2MTest.DB.pdb">
-      <publishTime>05/19/2018 20:15:17</publishTime>
+      <publishTime>05/20/2018 12:17:37</publishTime>
     </File>
     <File Include="bin/M2MTest.Entities.dll">
       <publishTime>05/19/2018 18:33:08</publishTime>
@@ -109,10 +115,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2018 18:33:08</publishTime>
     </File>
     <File Include="bin/M2MTest.WebAPI.dll">
-      <publishTime>05/19/2018 23:10:30</publishTime>
+      <publishTime>05/20/2018 14:06:30</publishTime>
     </File>
     <File Include="bin/M2MTest.WebAPI.pdb">
-      <publishTime>05/19/2018 23:10:30</publishTime>
+      <publishTime>05/20/2018 14:06:30</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>12/07/2015 19:04:38</publishTime>
@@ -188,6 +194,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/nunit.framework.dll">
+      <publishTime>03/12/2018 22:58:16</publishTime>
+    </File>
+    <File Include="bin/nunit.framework.pdb">
+      <publishTime>03/12/2018 22:58:16</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>11/27/2012 14:00:52</publishTime>
@@ -307,7 +319,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2018 11:48:06</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>05/19/2018 11:50:55</publishTime>
+      <publishTime>05/20/2018 12:12:12</publishTime>
     </File>
     <File Include="Scripts/ai.0.22.9-build00167.js">
       <publishTime>05/19/2018 11:48:32</publishTime>
@@ -370,7 +382,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2018 11:48:06</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/19/2018 23:35:19</publishTime>
+      <publishTime>05/20/2018 14:32:39</publishTime>
     </File>
   </ItemGroup>
 </Project>

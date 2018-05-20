@@ -7,7 +7,6 @@ using M2MTest.Entities;
 using log4net;
 using MongoDB.Driver;
 using System.Configuration;
-using System.Globalization;
 
 namespace M2MTest.DB
 {
@@ -16,8 +15,6 @@ namespace M2MTest.DB
     /// </summary>
     public class DBAcesso: IDisposable
     {
-        private CultureInfo lCulture = new CultureInfo("pt-br");
-
         /// <summary>
         /// Atributo de conexão com o Mongodb
         /// </summary>
@@ -75,11 +72,11 @@ namespace M2MTest.DB
         /// <summary>
         /// Lista o extrato com o total a ser pago por mês...
         /// </summary>
-        /// <param name="pData"></param>
-        /// <returns>Retorna </returns>
-        public List<ExtratoMensal> ListaExtrato(DateTime pData)
+        /// <param name="pData">Data usada para filtro no MOngo db</param>
+        /// <returns>Retorna uma lista de objetos Compra para classe de negócio</returns>
+        public List<Compra> ListaExtrato(DateTime pData)
         {
-            var lRetorno = new List<ExtratoMensal>();
+            var lRetorno = new List<Compra>();
 
             try
             {
@@ -97,12 +94,13 @@ namespace M2MTest.DB
 
                 var lLista = lCollection.Find<Compra>(lFiltro).ToList();
 
-                lLista.ForEach(xd => 
+                lLista.ForEach(item => 
                 {
-                    if (xd.DataCompra.Month == pData.Month && xd.DataCompra.Year == pData.Year)
-                        lRetorno.Add( this.CalculoJurosParcelado(xd));
+                    if (item.DataCompra.Month == pData.Month && item.DataCompra.Year == pData.Year)
+                    {
+                        lRetorno.Add(item);
+                    }
                 });
-                
             }
             catch (Exception ex)
             {
@@ -111,49 +109,7 @@ namespace M2MTest.DB
 
             return lRetorno;
         }
-
-        /// <summary>
-        /// Calcula o juros da compra parcelada
-        /// </summary>
-        /// <param name="pCompra">Objeto com os dados da compra parcelada</param>
-        /// <returns>Retorna o valor do objeto de extratoMensal com o Juros calculado</returns>
-        public ExtratoMensal CalculoJurosParcelado(Compra pCompra)
-        {
-            var lRetorno = new ExtratoMensal();
-
-            try
-            {
-                lRetorno.FormaPagamento = pCompra.FormaPagamento;
-
-                lRetorno.ValorPagto = pCompra.ValorPagto;
-
-                if (pCompra.FormaPagamento != "1")
-                {
-                    decimal lJuros = Convert.ToDecimal(ConfigurationManager.AppSettings["ValorJuros"], lCulture);
-
-                    lRetorno.ValorJuros = (pCompra.ValorPagto * lJuros);
-                    
-                    lRetorno.ValorTotal = pCompra.ValorPagto + lRetorno.ValorJuros;
-
-                    lRetorno.ValorParcela = (lRetorno.ValorTotal / 3);
-                }else
-                {
-                    lRetorno.ValorJuros = 0;
-
-                    lRetorno.ValorTotal = pCompra.ValorPagto;
-
-                    lRetorno.ValorParcela = 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                _Logger.Error(ex.Message, ex);
-            }
-
-            return lRetorno;
-        }
-
-
+        
         /// <summary>
         /// Deleta registro de compra do mongodb
         /// </summary>
@@ -234,7 +190,7 @@ namespace M2MTest.DB
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            //this.Dispose();
         }
     }
 }

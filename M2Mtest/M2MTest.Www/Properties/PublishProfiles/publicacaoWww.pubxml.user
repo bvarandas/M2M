@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/M2Mtest.dll">
-      <publishTime>05/19/2018 21:51:58</publishTime>
+      <publishTime>05/20/2018 12:17:45</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>10/16/2017 15:14:32</publishTime>

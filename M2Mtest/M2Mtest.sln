@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MTest.DB", "M2MTest.DB\M2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MTest.WebAPI", "M2MTest.WebAPI\M2MTest.WebAPI.csproj", "{BEE740C6-D540-4C63-88DE-94C95915A8C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MTest.Bus", "M2MTest.Bus\M2MTest.Bus.csproj", "{2F4DABC8-5B89-4658-8B8C-BD24B09CE0CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{BEE740C6-D540-4C63-88DE-94C95915A8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEE740C6-D540-4C63-88DE-94C95915A8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEE740C6-D540-4C63-88DE-94C95915A8C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4DABC8-5B89-4658-8B8C-BD24B09CE0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4DABC8-5B89-4658-8B8C-BD24B09CE0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4DABC8-5B89-4658-8B8C-BD24B09CE0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4DABC8-5B89-4658-8B8C-BD24B09CE0CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

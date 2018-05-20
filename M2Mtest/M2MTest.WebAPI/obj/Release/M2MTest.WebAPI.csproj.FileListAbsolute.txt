@@ -107,3 +107,5 @@ C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\bin\pt-br\System.Web.
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\obj\Release\M2MTest.WebAPI.csprojResolveAssemblyReference.cache
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\obj\Release\M2MTest.WebAPI.dll
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\obj\Release\M2MTest.WebAPI.pdb
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\bin\M2MTest.Bus.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.WebAPI\bin\M2MTest.Bus.pdb
