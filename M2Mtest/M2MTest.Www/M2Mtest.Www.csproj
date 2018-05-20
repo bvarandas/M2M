@@ -257,6 +257,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="style\jquery-ui-1.12.1.custom\package.json" />
+    <None Include="Properties\PublishProfiles\publicacaoWww.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

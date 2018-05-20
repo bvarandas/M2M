@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\bvarandas\source\repos\M2M\PublishWww</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/M2Mtest.dll">
+      <publishTime>05/19/2018 21:51:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>10/16/2017 15:14:32</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.Process.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.DriveInfo.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Pipes.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.AccessControl.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Claims.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Principal.Windows.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Thread.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>12/13/2017 23:09:38</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>05/10/2018 22:38:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>05/10/2018 22:37:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>05/10/2018 22:39:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>05/10/2018 22:39:16</publishTime>
+    </File>
+    <File Include="js/00-Auxiliares.js">
+      <publishTime>05/19/2018 11:42:26</publishTime>
+    </File>
+    <File Include="js/01-Compras.js">
+      <publishTime>05/19/2018 20:35:47</publishTime>
+    </File>
+    <File Include="js/jqGrid/css/ui.jqgrid-bootstrap-ui.css">
+      <publishTime>05/18/2018 16:18:54</publishTime>
+    </File>
+    <File Include="js/jqGrid/css/ui.jqgrid-bootstrap.css">
+      <publishTime>05/18/2018 16:18:54</publishTime>
+    </File>
+    <File Include="js/jqGrid/css/ui.jqgrid-bootstrap4.css">
+      <publishTime>05/18/2018 16:18:54</publishTime>
+    </File>
+    <File Include="js/jqGrid/css/ui.jqgrid.css">
+      <publishTime>05/18/2018 16:18:54</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/Changes.txt">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-ar.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-bg.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-ca.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-cn.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-cs.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-de.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-dk.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-el.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-en.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-es.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-fa.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-fi.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-fr.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-gl.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-he.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-hr.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-hu.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-id.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-is.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-it.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-ja.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-kr.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-lt.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-me.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-nl.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-no.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-pl.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-pt-br.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-pt.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-ro.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-ru.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-sk.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-sq.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-sr-latin.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-sr.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-sv.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-th.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-tr.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-tw.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-ua.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-uk.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/i18n/grid.locale-vi.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/install.txt">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/jquery-1.11.0.min.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/js/jquery.jqGrid.min.js">
+      <publishTime>05/18/2018 16:18:57</publishTime>
+    </File>
+    <File Include="js/jqGrid/plugins/grid.addons.js">
+      <publishTime>05/18/2018 16:19:00</publishTime>
+    </File>
+    <File Include="js/jqGrid/plugins/grid.postext.js">
+      <publishTime>05/18/2018 16:19:00</publishTime>
+    </File>
+    <File Include="js/jqGrid/plugins/grid.setcolumns.js">
+      <publishTime>05/18/2018 16:19:00</publishTime>
+    </File>
+    <File Include="js/jqGrid/plugins/jquery.contextmenu.js">
+      <publishTime>05/18/2018 16:19:00</publishTime>
+    </File>
+    <File Include="js/jqGrid/plugins/jquery.searchFilter.js">
+      <publishTime>05/18/2018 16:19:00</publishTime>
+    </File>
+    <File Include="js/jqGrid/plugins/jquery.tablednd.js">
+      <publishTime>05/18/2018 16:19:00</publishTime>
+    </File>
+    <File Include="js/jqGrid/plugins/searchFilter.css">
+      <publishTime>05/18/2018 16:19:00</publishTime>
+    </File>
+    <File Include="js/jqGrid/plugins/ui.multiselect.css">
+      <publishTime>05/18/2018 16:19:00</publishTime>
+    </File>
+    <File Include="js/jqGrid/plugins/ui.multiselect.js">
+      <publishTime>05/18/2018 16:19:00</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/css/ui.jqgrid-bootstrap-ui.css">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/css/ui.jqgrid-bootstrap.css">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/css/ui.jqgrid-bootstrap4.css">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/css/ui.jqgrid.css">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/css/ui.multiselect.css">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.base.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.celledit.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.common.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.export.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.filter.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.formedit.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.grouping.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.import.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.inlinedit.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.jqueryui.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.pivot.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.subgrid.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.treegrid.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/grid.utils.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-ar.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-bg.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-ca.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-cn.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-cs.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-de.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-dk.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-el.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-en.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-es.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-fa.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-fi.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-fr.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-gl.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-he.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-hr.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-hu.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-id.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-is.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-it.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-ja.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-kr.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-lt.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-me.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-nl.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-no.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-pl.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-pt-br.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-pt.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-ro.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-ru.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-sk.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-sq.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-sr-latin.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-sr.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-sv.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-th.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-tr.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-tw.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-uk.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/i18n/grid.locale-vi.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/jqDnR.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/jqModal.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/jquery.fmatter.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/jquery.jqGrid.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jqGrid/src/jquery.sortable.js">
+      <publishTime>05/18/2018 16:19:02</publishTime>
+    </File>
+    <File Include="js/jquery-3.3.1.js">
+      <publishTime>05/18/2018 16:13:46</publishTime>
+    </File>
+    <File Include="js/jquery-maskMoney.js">
+      <publishTime>05/19/2018 18:27:12</publishTime>
+    </File>
+    <File Include="js/jquery-ui.js">
+      <publishTime>05/18/2018 19:32:45</publishTime>
+    </File>
+    <File Include="ListaCompras.html">
+      <publishTime>05/19/2018 21:02:29</publishTime>
+    </File>
+    <File Include="style/images/ui-icons_555555_256x240.png">
+      <publishTime>05/18/2018 18:45:51</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/AUTHORS.txt">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/external/jquery/jquery.js">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-icons_222222_256x240.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-icons_228ef1_256x240.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/images/ui-icons_ffffff_256x240.png">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/index.html">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/jquery-ui.css">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/jquery-ui.js">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/jquery-ui.min.js">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/jquery-ui.structure.css">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/jquery-ui.theme.css">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/LICENSE.txt">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/jquery-ui-1.12.1.custom/package.json">
+      <publishTime>05/18/2018 20:58:21</publishTime>
+    </File>
+    <File Include="style/Style.css">
+      <publishTime>05/18/2018 18:38:05</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/19/2018 21:55:37</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

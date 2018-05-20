@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lista de compras com cartãod e crédito</title>
+    <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="js/jqGrid/src/jquery.jqGrid.js" type="text/javascript"></script>
+    <script src="js/00-Auxiliares.js" type="text/javascript"></script>
+    <script src="js/01-Compras.js" type="text/javascript"></script>
+    <script src="js/jquery-maskMoney.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="style/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <!--<link rel="stylesheet" href="style/Style.css">-->
+    <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript">
+        function Page_Load_CodeBehind()
+        {
+            Load_Grid_Compras();
+            Load_Grid_ExtratoMensal();
+            LoadInicialGridCompras();
+
+            $("#tabs").tabs();
+
+            $(function () {
+                $('.date-picker-month').datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    dateFormat: 'mm/yy',
+                    onClose: function (dateText, inst) {
+                        $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+                    }
+                });
+
+                $('.date-picker').datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    dateFormat: 'dd/mm/yy',
+                    /*onClose: function (dateText, inst) {
+                        $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+                    }*/
+                });
+
+                $(".money").maskMoney({
+                    prefix: "R$:",
+                    decimal: ",",
+                    thousands: "."
+                });
+            });
+
+            //$("body").append($.ui.dialog.overlay.create());
+        }
+    </script>
+</head>
+<body onload="Page_Load()">
+    <input type="hidden" id="hidRaizDoSite" value="http://localhost:50970/" />
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab-1">Lista de Compras</a></li>
+            <li><a href="#tab-2">Extrato</a></li>
+        </ul>
+            <div id="tab-1">
+                <div>
+                    <table id="tblListaCompras"  align="center"></table>
+                    <div id="ComprasGridPager"></div>
+                </div>
+                <p>
+                    <input type="button" id="btnAbreModalCompra_Click" value="Nova Compra" class="ui-button" onclick="javascript:btnAbreModalCompra_Click()">
+
+                    <input type="button" id="btnCarregaMock_Click" value="Carregar Dados Mock" class="ui-button" onclick="javascript:btnCarregaMock_Click()">
+                </p>
+            </div>
+            <div id="tab-2">
+                <p>
+                    Filtro (Mês/Ano): <input type="text" id="txtDataFiltro" class="date-picker-month" onchange="javascript: btnFiltroExtrato_Click()" />
+                </p>
+                <div>
+                    <table id="tblListaExtratoMensal" align="center"></table>
+                    <div id="ExtratoGridPager"></div>
+                </div>
+            </div>
+        </div>
+        <!--Modal-->
+        <div id="dialog" title="Nova Compra" style="display:none">
+            <p>Descrição <input type="text" id="txtExtratoDescricao" maxlength="100" /></p>
+            <p>Estabelecimento <input type="text" id="txtExtratoEstabelecimento" maxlength="100" /></p>
+            <p>Data Compra <input type="text" id="txtExtratoDataCompra" maxlength="100" class="date-picker"  /></p>
+            <p>
+                Forma de Pagamento <select id="cboFormaPagamento">
+                    <option value="1">A vista</option>
+                    <option value="2">Parcelado 3x com juros</option>
+                </select>
+
+            </p>
+            <p>
+                Valor da compra
+                <input type="text" id="txtValorPagto" class="money" />
+            </p>
+            <p> <input type="button" id="btnNovaCompra_Click" class="ui-button" value="Inserir Compra" onclick="btnNovaCompra_Click()" /></p>
+        </div>
+
+
+</body>
+</html>

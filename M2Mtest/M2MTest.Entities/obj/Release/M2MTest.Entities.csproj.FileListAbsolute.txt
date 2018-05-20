@@ -1,0 +1,15 @@
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\M2MTest.Entities.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\M2MTest.Entities.pdb
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\DnsClient.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\MongoDB.Bson.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\MongoDB.Driver.Core.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\MongoDB.Driver.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\System.Buffers.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\DnsClient.xml
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\MongoDB.Bson.xml
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\MongoDB.Driver.xml
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Release\MongoDB.Driver.Core.xml
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\obj\Release\M2MTest.Entities.csprojResolveAssemblyReference.cache
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\obj\Release\M2MTest.Entities.dll
+C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\obj\Release\M2MTest.Entities.pdb
