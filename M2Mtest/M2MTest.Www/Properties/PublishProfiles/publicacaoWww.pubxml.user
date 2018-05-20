@@ -10,7 +10,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/M2Mtest.dll">
-      <publishTime>05/20/2018 12:17:45</publishTime>
+      <publishTime>05/20/2018 16:44:49</publishTime>
+    </File>
+    <File Include="bin/M2Mtest.pdb">
+      <publishTime>05/20/2018 16:44:49</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>10/16/2017 15:14:32</publishTime>
@@ -178,7 +181,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2018 11:42:26</publishTime>
     </File>
     <File Include="js/01-Compras.js">
-      <publishTime>05/19/2018 20:35:47</publishTime>
+      <publishTime>05/20/2018 16:26:17</publishTime>
     </File>
     <File Include="js/jqGrid/css/ui.jqgrid-bootstrap-ui.css">
       <publishTime>05/18/2018 16:18:54</publishTime>
@@ -649,7 +652,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/18/2018 18:38:05</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/19/2018 21:55:37</publishTime>
+      <publishTime>05/20/2018 16:45:04</publishTime>
     </File>
   </ItemGroup>
 </Project>

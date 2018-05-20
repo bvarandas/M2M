@@ -21,7 +21,3 @@ C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\bin\Debug\DnsClient.xml
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\obj\Debug\M2MTest.Bus.csprojResolveAssemblyReference.cache
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\obj\Debug\M2MTest.Bus.dll
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\obj\Debug\M2MTest.Bus.pdb
-C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\bin\Debug\M2MTest.Bus.dll.config
-C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\bin\Debug\nunit.framework.dll
-C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\bin\Debug\nunit.framework.pdb
-C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\bin\Debug\nunit.framework.xml

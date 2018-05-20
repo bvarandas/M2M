@@ -183,6 +183,5 @@ C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Www\bin\System.Net.Http.Form
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Www\bin\System.Web.Http.xml
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Www\bin\System.Web.Http.Cors.xml
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Www\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Www\obj\Debug\M2MTest.Www.csprojResolveAssemblyReference.cache
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Www\obj\Debug\M2Mtest.dll
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Www\obj\Debug\M2Mtest.pdb

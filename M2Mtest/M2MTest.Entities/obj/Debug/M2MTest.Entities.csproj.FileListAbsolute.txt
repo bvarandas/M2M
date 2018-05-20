@@ -25,6 +25,5 @@ C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Debug\DnsClient
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Debug\MongoDB.Bson.xml
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Debug\MongoDB.Driver.xml
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\bin\Debug\MongoDB.Driver.Core.xml
-C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\obj\Debug\M2MTest.Entities.csprojResolveAssemblyReference.cache
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\obj\Debug\M2MTest.Entities.dll
 C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Entities\obj\Debug\M2MTest.Entities.pdb

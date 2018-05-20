@@ -97,28 +97,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/30/2013 15:40:56</publishTime>
     </File>
     <File Include="bin/M2MTest.Bus.dll">
-      <publishTime>05/20/2018 15:04:37</publishTime>
+      <publishTime>05/20/2018 16:29:25</publishTime>
     </File>
     <File Include="bin/M2MTest.Bus.pdb">
-      <publishTime>05/20/2018 15:04:37</publishTime>
+      <publishTime>05/20/2018 16:29:25</publishTime>
     </File>
     <File Include="bin/M2MTest.DB.dll">
-      <publishTime>05/20/2018 12:17:37</publishTime>
+      <publishTime>05/20/2018 16:29:25</publishTime>
     </File>
     <File Include="bin/M2MTest.DB.pdb">
-      <publishTime>05/20/2018 12:17:37</publishTime>
+      <publishTime>05/20/2018 16:29:25</publishTime>
     </File>
     <File Include="bin/M2MTest.Entities.dll">
-      <publishTime>05/19/2018 18:33:08</publishTime>
+      <publishTime>05/20/2018 16:29:24</publishTime>
     </File>
     <File Include="bin/M2MTest.Entities.pdb">
-      <publishTime>05/19/2018 18:33:08</publishTime>
+      <publishTime>05/20/2018 16:29:24</publishTime>
     </File>
     <File Include="bin/M2MTest.WebAPI.dll">
-      <publishTime>05/20/2018 15:07:17</publishTime>
+      <publishTime>05/20/2018 16:29:31</publishTime>
     </File>
     <File Include="bin/M2MTest.WebAPI.pdb">
-      <publishTime>05/20/2018 15:07:17</publishTime>
+      <publishTime>05/20/2018 16:29:31</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>12/07/2015 19:04:38</publishTime>
