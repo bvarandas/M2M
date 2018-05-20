@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MTest.Www", "M2MTest.Www\M2MTest.Www.csproj", "{B94D85E3-3786-47AA-8908-88E1545D1820}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "references", "references", "{8F3227CA-704A-451F-92E2-B9CF33457980}"
+	ProjectSection(SolutionItems) = preProject
+		references\log4net.dll = references\log4net.dll
+		references\Newtonsoft.Json.dll = references\Newtonsoft.Json.dll
+		references\Newtonsoft.Json.pdb = references\Newtonsoft.Json.pdb
+		references\Newtonsoft.Json.xml = references\Newtonsoft.Json.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MTest.Entities", "M2MTest.Entities\M2MTest.Entities.csproj", "{7B34783B-C2C5-4EBF-B292-69F2FF6C1684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MTest.DB", "M2MTest.DB\M2MTest.DB.csproj", "{73E2D288-3FF4-4125-9346-4D7DFF26D3CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MTest.WebAPI", "M2MTest.WebAPI\M2MTest.WebAPI.csproj", "{BEE740C6-D540-4C63-88DE-94C95915A8C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B94D85E3-3786-47AA-8908-88E1545D1820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94D85E3-3786-47AA-8908-88E1545D1820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94D85E3-3786-47AA-8908-88E1545D1820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94D85E3-3786-47AA-8908-88E1545D1820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B34783B-C2C5-4EBF-B292-69F2FF6C1684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B34783B-C2C5-4EBF-B292-69F2FF6C1684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B34783B-C2C5-4EBF-B292-69F2FF6C1684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B34783B-C2C5-4EBF-B292-69F2FF6C1684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E2D288-3FF4-4125-9346-4D7DFF26D3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E2D288-3FF4-4125-9346-4D7DFF26D3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E2D288-3FF4-4125-9346-4D7DFF26D3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E2D288-3FF4-4125-9346-4D7DFF26D3CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE740C6-D540-4C63-88DE-94C95915A8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE740C6-D540-4C63-88DE-94C95915A8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE740C6-D540-4C63-88DE-94C95915A8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE740C6-D540-4C63-88DE-94C95915A8C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F9CF0C3-BA64-479D-9076-49DFC4E8C61D}
+	EndGlobalSection
+EndGlobal
