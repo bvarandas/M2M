@@ -7,6 +7,8 @@ using M2MTest.Entities;
 using log4net;
 using MongoDB.Driver;
 using System.Configuration;
+using MongoDB.Bson;
+using System.Globalization;
 
 namespace M2MTest.DB
 {
@@ -29,6 +31,11 @@ namespace M2MTest.DB
         /// Atributo responsável pela log da classe
         /// </summary>
         public static readonly log4net.ILog _Logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        /// <summary>
+        /// Para conversão de moeda
+        /// </summary>
+        public CultureInfo _culture = new CultureInfo("en-US");
 
         public DBAcesso()
         {
@@ -86,20 +93,37 @@ namespace M2MTest.DB
 
                 IMongoCollection<Compra> lCollection = lDataBase.GetCollection<Compra>("Compras");
 
+                var lProject = BsonDocument.Parse("{_id:1, IdCompra:1, Descricao:1, Estabelecimento:1, DataCompra:1, FormaPagamento:1,ValorPagto:1, year:{ $year: '$DataCompra'}, month: {$month: '$DataCompra'}}");
+
+                var aggDoc = lCollection
+                    .Aggregate()
+                    //.Unwind("C")
+                    .Project(lProject)
+                    .Match(BsonDocument.Parse("{year: {$eq:" + pData.Year + "}, month: {$eq:" + pData.Month + "}}")).ToList() ;
+
+
                 //lCollection.Aggregate([$month: { }])
 
                 //var lFiltro = Builders<Compra>.Filter.Where(xd => Convert.ToDateTime( xd.DataCompra).Month == pData.Month && Convert.ToDateTime( xd.DataCompra).Year == pData.Year);
 
-                var lFiltro = Builders<Compra>.Filter.Empty;
+                //var lFiltro = Builders<Compra>.Filter.Empty;
 
-                var lLista = lCollection.Find<Compra>(lFiltro).ToList();
+                //var lLista = lCollection.Find<Compra>(lFiltro).ToList();
 
-                lLista.ForEach(item => 
+                
+                aggDoc.ForEach(item => 
                 {
-                    if (item.DataCompra.Month == pData.Month && item.DataCompra.Year == pData.Year)
-                    {
-                        lRetorno.Add(item);
-                    }
+                    var compra = new Compra();
+
+                    compra.IdCompra         = Convert.ToInt32(item["IdCompra"]);
+                    compra.Descricao        = item["Descricao"].ToString();
+                    compra.Estabelecimento  = item["Estabelecimento"].ToString();
+                    compra.DataCompra       = Convert.ToDateTime(item["DataCompra"].ToString());
+                    compra.FormaPagamento   = item["FormaPagamento"].ToString();
+                    compra.ValorPagto       = Convert.ToDecimal(item["ValorPagto"], _culture);
+
+
+                    lRetorno.Add(compra);
                 });
             }
             catch (Exception ex)

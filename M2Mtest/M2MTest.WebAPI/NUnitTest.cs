@@ -72,12 +72,38 @@ namespace M2MTest.WebAPI
 
             lBus.CarregarDadosMock();
 
-            var lData = new DateTime(2018, 2, 1);
+            var lData1 = new DateTime(2018, 1, 1);
+            var lData2 = new DateTime(2018, 2, 1);
+            var lData3 = new DateTime(2018, 3, 1);
+            var lData4 = new DateTime(2018, 4, 1);
+            var lData5 = new DateTime(2018, 5, 1);
 
-            /// há um registro de extrato no mÊs de fevereiro
-            var lLista = lBus.ListaExtrato(lData);
+            /// há um registro de extrato no mÊs de Janeiro
+            var lLista1 = lBus.ListaExtrato(lData1);
 
-            Assert.AreEqual(1, lLista.Count);
+            Assert.AreEqual(1, lLista1.Count);
+
+            /// há um registro de extrato no mÊs de Fevereiro
+            var lLista2 = lBus.ListaExtrato(lData2);
+
+            Assert.AreEqual(1, lLista2.Count);
+
+            /// há um registro de extrato no mÊs de Março
+            var lLista3 = lBus.ListaExtrato(lData3);
+
+            Assert.AreEqual(1, lLista3.Count);
+
+            /// há um registro de extrato no mÊs de Abril
+            var lLista4 = lBus.ListaExtrato(lData4);
+
+            Assert.AreEqual(1, lLista4.Count);
+
+            /// há um registro de extrato no mÊs de Maio
+            var lLista5 = lBus.ListaExtrato(lData5);
+
+            Assert.AreEqual(1, lLista5.Count);
         }
+
+
     }
 }

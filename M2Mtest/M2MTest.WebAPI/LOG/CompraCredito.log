@@ -1,4 +1,101 @@
-2018-05-20 11:46:16,245 [12] INFO  M2MTest.DB.DBAcesso - Inserindo o objeto (lista) no mongodb: [{"_id":"000000000000000000000000","IdCompra":1,"Descricao":"Par de meias adidas","Estabelecimento":"Deas artigos esportivos","DataCompra":"2018-01-26T00:00:00","FormaPagamento":"1","ValorPagto":15.60},{"_id":"000000000000000000000000","IdCompra":2,"Descricao":"Churrasqueira de aco","Estabelecimento":"Boa vista supermercado","DataCompra":"2018-02-18T00:00:00","FormaPagamento":"2","ValorPagto":500.85},{"_id":"000000000000000000000000","IdCompra":3,"Descricao":"Tenys pe Garuel","Estabelecimento":"Droga Arraia","DataCompra":"2018-03-09T00:00:00","FormaPagamento":"1","ValorPagto":90.99},{"_id":"000000000000000000000000","IdCompra":4,"Descricao":"Carne de Porco","Estabelecimento":"Boa vista supermercado","DataCompra":"2018-04-19T00:00:00","FormaPagamento":"2","ValorPagto":29.99},{"_id":"000000000000000000000000","IdCompra":5,"Descricao":"Pacote de fralda","Estabelecimento":"Droga Arraia","DataCompra":"2018-05-15T00:00:00","FormaPagamento":"1","ValorPagto":50.99}]
-2018-05-20 11:46:16,575 [12] INFO  M2MTest.DB.DBAcesso - Inserção de Compras inserida no banco de dados
-2018-05-20 11:58:05,516 [5] INFO  M2MTest.DB.DBAcesso - Inserindo o objeto (lista) no mongodb: [{"_id":"000000000000000000000000","IdCompra":1,"Descricao":"Par de meias adidas","Estabelecimento":"Deas artigos esportivos","DataCompra":"2018-01-26T00:00:00","FormaPagamento":"1","ValorPagto":15.60},{"_id":"000000000000000000000000","IdCompra":2,"Descricao":"Churrasqueira de aco","Estabelecimento":"Boa vista supermercado","DataCompra":"2018-02-18T00:00:00","FormaPagamento":"2","ValorPagto":500.85},{"_id":"000000000000000000000000","IdCompra":3,"Descricao":"Tenys pe Garuel","Estabelecimento":"Droga Arraia","DataCompra":"2018-03-09T00:00:00","FormaPagamento":"1","ValorPagto":90.99},{"_id":"000000000000000000000000","IdCompra":4,"Descricao":"Carne de Porco","Estabelecimento":"Boa vista supermercado","DataCompra":"2018-04-19T00:00:00","FormaPagamento":"2","ValorPagto":29.99},{"_id":"000000000000000000000000","IdCompra":5,"Descricao":"Pacote de fralda","Estabelecimento":"Droga Arraia","DataCompra":"2018-05-15T00:00:00","FormaPagamento":"1","ValorPagto":50.99}]
-2018-05-20 11:58:05,772 [5] INFO  M2MTest.DB.DBAcesso - Inserção de Compras inserida no banco de dados
+2018-05-21 09:56:52,539 [8] INFO  M2MTest.DB.DBAcesso - Inserindo o objeto (lista) no mongodb: [{"_id":"000000000000000000000000","IdCompra":1,"Descricao":"Par de meias adidas","Estabelecimento":"Deas artigos esportivos","DataCompra":"2018-01-26T00:00:00","FormaPagamento":"1","ValorPagto":15.60},{"_id":"000000000000000000000000","IdCompra":2,"Descricao":"Churrasqueira de aco","Estabelecimento":"Boa vista supermercado","DataCompra":"2018-02-18T00:00:00","FormaPagamento":"2","ValorPagto":500.85},{"_id":"000000000000000000000000","IdCompra":3,"Descricao":"Tenys pe Garuel","Estabelecimento":"Droga Arraia","DataCompra":"2018-03-09T00:00:00","FormaPagamento":"1","ValorPagto":90.99},{"_id":"000000000000000000000000","IdCompra":4,"Descricao":"Carne de Porco","Estabelecimento":"Boa vista supermercado","DataCompra":"2018-04-19T00:00:00","FormaPagamento":"2","ValorPagto":29.99},{"_id":"000000000000000000000000","IdCompra":5,"Descricao":"Pacote de fralda","Estabelecimento":"Droga Arraia","DataCompra":"2018-05-15T00:00:00","FormaPagamento":"1","ValorPagto":50.99}]
+2018-05-21 09:56:55,602 [8] INFO  M2MTest.DB.DBAcesso - Inserção de Compras inserida no banco de dados
+2018-05-21 10:18:52,755 [8] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListarCompras() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 46
+2018-05-21 10:18:59,024 [8] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListarCompras() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 46
+2018-05-21 10:19:53,235 [11] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListarCompras() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 46
+2018-05-21 10:20:06,595 [8] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListaExtrato(DateTime pData) na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 70
+2018-05-21 10:20:18,275 [8] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListarCompras() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 46
+2018-05-21 10:20:40,549 [8] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListarCompras() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 46
+2018-05-21 10:21:57,738 [11] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListarCompras() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 46
+2018-05-21 10:21:58,793 [8] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListarCompras() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 46
+2018-05-21 10:22:04,640 [9] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListaExtrato(DateTime pData) na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 70
+2018-05-21 10:22:28,723 [10] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListarCompras() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 46
+2018-05-21 10:24:54,347 [5] ERROR M2MTest.Bus.CompraBus - Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+System.Globalization.CultureNotFoundException: Não há suporte para cultura.
+Nome do parâmetro: name
+een-US é um identificador de cultura inválido.
+   em System.Globalization.CultureInfo..ctor(String name, Boolean useUserOverride)
+   em M2MTest.DB.DBAcesso..ctor() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.DB\DBAcesso.cs:linha 38
+   em M2MTest.Bus.CompraBus.ListarCompras() na C:\Users\bvarandas\source\repos\M2M\M2Mtest\M2MTest.Bus\CompraBus.cs:linha 46
